@@ -1,0 +1,720 @@
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>
+  <div class="header">
+    <div class="pss"><a href="calc.html">Calculator Page</a></div>
+    <div class="pss"><a href="calc.html">History Page</a></div>
+    <div class="pss"><a href="calc.html">Profile Page</a></div>
+    <div class="lot"><a href="calc.html">Log Out</a></div>
+  </div>
+  <div id="container" class="container">
+    <div>
+      <h1>Calculator</h1>
+    </div>
+    <div id="expression">
+      
+    </div>
+    <div id="standard-buttons" class="container-fluid">
+      <div class="row button-row">
+        <div class="col-xs-1">
+          <button id="num-7" class="btn num" title="7">7</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-8"  class="btn num" title="8">8</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-9"  class="btn num" title="9">9</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-divide" class="btn" title="Divide">÷</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="clear" class="btn button-orange" title="Clear all">AC</button>
+        </div>
+      </div>
+      <div class="row button-row">
+        <div class="col-xs-1">
+          <button id="num-4"  class="btn num" title="4">4</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-5"  class="btn num" title="5">5</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-6"  class="btn num" title="6">6</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-multiply" class="btn" title="Multiply">x</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="delete" class="btn button-orange" title="Delete">DEL</button>
+        </div>
+      </div>
+      <div class="row button-row">
+        <div class="col-xs-1">
+          <button id="num-1"  class="btn num" title="1">1</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-2"  class="btn num" title="2">2</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-3"  class="btn num" title="3">3</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-subtract" class="btn" title="Subtract">-</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="equals" class="btn button-blue" title="Equals">=</button>
+        </div>
+      </div>
+      <div class="row button-row">
+        <div class="col-xs-1">
+          <button id="period" class="btn" title="Decimal point">.</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-0" class="btn num" title="0">0</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-negate" class="btn" title="Negate">(-)</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-add" class="btn" title="Add">+</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="toggle-advanced" class="btn button-off" title="Toggle advanced panel"><span class="glyphicon glyphicon-triangle-bottom"></span></button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div id="advanced-buttons" class="container-fluid">
+      <div class="row button-row">
+        <div class="col-xs-1">
+          <button id="op-power" class="btn" title="Exponentiate">^</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="num-pi" class="btn num" title="Pi">π</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-inverse-sin" class="btn" title="Inverse sine">asin</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-inverse-cos" class="btn" title="Inverse cosine">acos</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-inverse-tan" class="btn" title="Inverse tangent">atan</button>
+        </div>
+      </div>
+      <div class="row button-row">
+        <div class="col-xs-1">
+          <button id="op-square-root" class="btn" title="Square root">√</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-nth-root" class="btn" title="nth root">x*√</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-sin" class="btn" title="Sine">sin</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-cos" class="btn" title="Cosine">cos</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-tan" class="btn" title="Tangent">tan</button>
+        </div>
+      </div>
+      <div class="row button-row">
+        <div class="col-xs-1">
+          <button id="op-log" class="btn" title="Log base 10">log</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-natural-log" class="btn" title="Natural log (base e)">ln</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="op-e" class="btn" title="Exponential function">e^x</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="bracket-left" class="btn" title="Open bracket">(</button>
+        </div>
+        <div class="col-xs-1">
+          <button id="bracket-right" class="btn" title="Closed bracket">)</button>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+    </div>
+  </div>
+</body>
+<style>
+body {
+  background-color: #121212;
+  color: white;
+}
+.header{
+  display:flex;
+  height: 60px;
+  justify-content: center;
+  background-color:#33adff71;
+}
+.pss{
+  margin-top: 18px;
+  margin-left: 50px;
+
+}
+.lot{
+  margin-left: 320px;
+
+}
+.lot:active,.pss:active{
+  background-color: #461010;
+  margin-bottom: 20px;
+  color: black;
+  height: 20px;
+}
+.lot:hover,.pss:hover{
+  background-color: #444444;
+  margin-bottom: 20px;
+  height: 20px;
+}
+a{
+  text-decoration: none;
+}
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn {
+  box-shadow: 0px 5px 10px #222222;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.button-row div {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  margin: 5px;
+}
+
+.button-row .btn {
+  width: 60px;
+  height: 60px;
+  background-color: #636363;
+}
+
+.button-row .btn:hover {
+  background-color: #858585;
+  color: white !important;
+}
+
+.button-orange {
+  background-color: #FF8400 !important;
+}
+
+.button-orange:hover {
+  background-color: #FFA647 !important;
+}
+
+.button-blue {
+  background-color: #0099FF !important;
+}
+
+.button-blue:hover {
+  background-color: #33ADFF !important;
+}
+
+.button-off {
+  background-color: #454545 !important;
+}
+
+.calc-history-eq {
+  color: #B0B0B0;
+  cursor: pointer;
+}
+
+#container {
+  width: 600px;
+  background-color: #2E2E2E;
+  height: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#expression {
+  height: 60px;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: right;
+  background-color: #636363;
+  border-radius: 5px;
+  font-size: 30px;
+  box-shadow: 0px 5px 10px #444444 inset;
+}
+
+#standard-buttons {
+  display: inline-block;
+  margin-left: -20px;
+  margin-bottom: 10px;
+}
+
+#advanced-buttons {
+  display: inline-block;
+  display: none;
+  margin-left: -20px;
+}
+
+#toggle-advanced:hover {
+  background-color: #858585 !important;
+}
+
+#toggle-advanced span {
+  pointer-events: none;
+}
+
+#calc-history {
+  float: right;
+  width: 200px;
+  height: 270px;
+  background-color: #636363;
+  border-radius: 5px;
+  margin-top: 6px;
+  padding: 10px;
+  box-shadow: 0px 5px 10px #444444 inset;
+}
+
+#calc-history-box {
+  width: 180px !important;
+  height: 220px !important;
+  resize: none;
+  overflow: hidden;
+}
+
+#calc-history hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#footer {
+  background-color: #262626;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: -15px;
+  margin-top: 15px;
+  padding: 10px;
+  padding-bottom: 1px;
+  color: #636363;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+</style>
+
+<script>
+$(document).ready(function() {
+  
+  // A database of the symbols and functions of every operand. Order of operators determines precedence.
+  var operators = [
+    {
+      id: "op-power",
+      numOperands: 2,
+      symbol: " ^ ",
+      calc: function(a, b) {
+        return Math.pow(a, b);
+      }
+    },
+    {
+      id: "op-negate",
+      numOperands: 1,
+      symbol: " -",
+      calc: function(a) {
+        return -a;
+      }
+    },
+    {
+      id: "op-square-root",
+      numOperands: 1,
+      symbol: " √",
+      calc: function(a) {
+        return Math.sqrt(a);
+      }
+    },
+    {
+      id: "op-log",
+      numOperands: 1,
+      symbol: " log ",
+      calc: function(a) {
+        return Math.log10(a);
+      }
+    },
+    {
+      id: "op-natural-log",
+      numOperands: 1,
+      symbol: " ln ",
+      calc: function(a) {
+        return Math.log(a);
+      }
+    },
+    {
+      id: "op-sin",
+      numOperands: 1,
+      symbol: " sin ",
+      calc: function(a) {
+        return Math.sin(a);
+      }
+    },
+    {
+      id: "op-cos",
+      numOperands: 1,
+      symbol: " cos ",
+      calc: function(a) {
+        return Math.cos(a);
+      }
+    },
+    {
+      id: "op-tan",
+      numOperands: 1,
+      symbol: " tan ",
+      calc: function(a) {
+        return Math.tan(a);
+      }
+    },
+    {
+      id: "op-inverse-sin",
+      numOperands: 1,
+      symbol: " sin-1 ",
+      calc: function(a) {
+        return Math.asin(a);
+      }
+    },
+    {
+      id: "op-inverse-cos",
+      numOperands: 1,
+      symbol: " cos-1 ",
+      calc: function(a) {
+        return Math.acos(a);
+      }
+    },
+    {
+      id: "op-inverse-tan",
+      numOperands: 1,
+      symbol: " tan-1 ",
+      calc: function(a) {
+        return Math.atan(a);
+      }
+    },
+    {
+      id: "op-e",
+      numOperands: 1,
+      symbol: " e ^ ",
+      calc: function(a) {
+        return Math.exp(a);
+      }
+    },
+    {
+      id: "op-nth-root",
+      numOperands: 2,
+      symbol: "*√",
+      calc: function(a, b) {
+        return Math.pow(b, 1/a);
+      }
+    },
+    {
+      id: "op-multiply",
+      numOperands: 2,
+      symbol: " x ",
+      calc: function(a, b) {
+        return a * b;
+      }
+    },
+    {
+      id: "op-divide",
+      numOperands: 2,
+      symbol: " ÷ ",
+      calc: function(a, b) {
+        return a / b;
+      }
+    },
+    {
+      id: "op-add",
+      numOperands: 2,
+      symbol: " + ",
+      calc: function(a, b) {
+        return a + b;
+      }
+    },
+    {
+      id: "op-subtract",
+      numOperands: 2,
+      symbol: " - ",
+      calc: function(a, b) {
+        return a - b;
+      }
+    }
+  ];
+  
+  // The number of places to round to
+  const roundPlaces = 15;
+  
+  // Get the operator object for a given operator ID
+  function getOperator(opID) {
+    for(var i = 0; i < operators.length; i++) {
+      if(operators[i].id === opID) {
+        return operators[i];
+      }
+    }
+    return undefined;
+  }
+  
+  // Get the precedence of an operator given its ID
+  function getOpPrecedence(opID) {
+    for(var i = 0; i < operators.length; i++) {
+      if(operators[i].id === opID) {
+        return i;
+      }
+    }
+    
+    // If the given ID does not return an operator, then return a large value that will always lose in precedence
+    return 1000;
+  }
+      
+  // Returns true if op1 ID has equal or higher precedence than op2 ID, false otherwise
+  function hasPrecedence(op1, op2) {
+    if(getOperator(op1) != undefined) {
+      return getOpPrecedence(op1) <= getOpPrecedence(op2);
+    }
+  }
+  
+  // Converts the given radian value to degrees
+  function toDegrees(radians) {
+    return radians * (180 / Math.PI);
+  }
+  
+  // Converts the given degrees value to radians
+  function toRadians(degrees) {
+    return degrees * (Math.PI / 180);
+  }
+  
+  // A list of every token (number or operator) currently in the expression
+  var tokenList = [];
+  
+  // A list of previous results and expressions in the form {out: output, expression: expression string, tokens: list of tokens in the expression}
+  var calcHistory = [];
+  
+  // Evaluates the expression and outputs the result
+  function calculate() {
+    // Check if brackets are balanced
+    var count = 0;
+    for(var i = 0; i < tokenList.length; i++) {
+      if(tokenList[i] === "bracket-left") {
+        count++;
+      } else if(tokenList[i] === "bracket-right") {
+        count--;
+      }
+    }
+    if(count != 0) {
+      output("Error: unbalanced brackets");
+      return;
+    }
+    
+    // Evaluate the expression using a modified version of the shunting yard algorithm
+    var valStack = [];
+    var opStack = [];
+    
+    for(var i = 0; i < tokenList.length; i++) {
+      if(!isNaN(tokenList[i])) {
+        valStack.push(tokenList[i]);
+      } else if(tokenList[i] === "num-pi") {
+        valStack.push(Math.PI);
+      } else if(tokenList[i] === "bracket-left") {
+        opStack.push(tokenList[i]);
+      } else if(tokenList[i] === "bracket-right") {
+        while(opStack[opStack.length - 1] !== "bracket-left") {
+          var operator = getOperator(opStack.pop());
+          if(operator.numOperands === 1)
+            valStack.push(applyOperator(operator, [valStack.pop()]));
+          else
+            valStack.push(applyOperator(operator, [valStack.pop(), valStack.pop()]));
+        }
+        opStack.pop();
+      } else {
+        while(opStack.length > 0 && hasPrecedence(opStack[opStack.length - 1], tokenList[i])) {
+          var operator = getOperator(opStack.pop());
+          if(operator.numOperands === 1)
+            valStack.push(applyOperator(operator, [valStack.pop()]));
+          else
+            valStack.push(applyOperator(operator, [valStack.pop(), valStack.pop()]));
+        }
+        opStack.push(tokenList[i]);
+      }
+    }
+    
+    while(opStack.length > 0) {
+      var operator = getOperator(opStack.pop());
+      if(operator.numOperands === 1)
+        valStack.push(applyOperator(operator, [valStack.pop()]));
+      else
+        valStack.push(applyOperator(operator, [valStack.pop(), valStack.pop()]));
+    }
+    
+    // Output the calculated result and the original expression
+    output(valStack[0], $("#expression").html(), tokenList);
+  }
+  
+  // Returns the result of applying the given unary or binary operator on the top values of the value stack
+  function applyOperator(operator, vals) {
+    var valA = vals[0];
+    var result;
+    
+    if(vals.length === 1) {
+      result = operator.calc(parseFloat(valA));
+    } else {
+      var valB = vals[1];
+      result = operator.calc(parseFloat(valB), parseFloat(valA));
+    }
+
+    return result;
+  }
+  
+  // Updates the equation and calc history with the given output
+  function output(out, expression, tokens) {
+    out = +out.toFixed(roundPlaces);
+    $("#expression").html(out.toString());
+    
+    calcHistory.push({out: out, expression: expression, tokens: tokens});
+    $("#calc-history-box").html("");
+    for(var i = calcHistory.length - 1; i >= 0; i--) {
+      $("#calc-history-box").append("<p style='color: #B0B0B0; ' class='calc-history-eq' id='eq" + i + "'>" + calcHistory[i].expression + "</p><p style='text-align: right; margin-top: -10px;'>= " + calcHistory[i].out + "</p>");
+    }
+  }
+  
+  // Adds a token to the token list and updates the display
+  function addToken(token) {
+    if(isNaN(token)) {
+      if((token === "bracket-left" || token === "num-pi") && !isNaN(tokenList[tokenList.length - 1])) {
+        tokenList.push("op-multiply");
+      }
+      tokenList.push(token);
+    } else {
+      if(!isNaN(tokenList[tokenList.length - 1])) {
+        tokenList[tokenList.length - 1] = tokenList[tokenList.length - 1] + token;
+      } else {
+        if(!isNaN(token) && (tokenList[tokenList.length - 1] === "bracket-right" || tokenList[tokenList.length - 1] === "num-pi")) {
+          tokenList.push("op-multiply");
+        }
+        tokenList.push(token);
+      }
+    }
+        
+    displayEquation();
+  }
+
+  // Updates the expression display's HTML
+  function displayEquation() {
+    var htmlString = "";
+    for(var i = 0; i < tokenList.length; i++) {
+      if(isNaN(tokenList[i])) {
+        if(tokenList[i] === "bracket-left") {
+          htmlString += " (";
+        } else if(tokenList[i] === "bracket-right") {
+          htmlString += ") ";
+        } else if(tokenList[i] === "num-pi") {
+          htmlString += " π ";
+        } else {
+          htmlString += getOperator(tokenList[i]).symbol;
+        }
+      } else {
+        htmlString += tokenList[i];
+      }
+    }
+    $("#expression").html(htmlString);
+  }
+  
+  // Deletes the last entered token
+  function deleteLast() {
+    if(isNaN(tokenList[tokenList.length - 1])) {
+      tokenList.pop();
+    } else {
+      tokenList[tokenList.length - 1] = tokenList[tokenList.length - 1].slice(0, -1);
+      if(tokenList[tokenList.length -1].length === 0) {
+        tokenList.pop();
+      }
+    }
+    
+    displayEquation();
+  }
+  
+  // Shows/hides the advanced operators panel
+  function toggleAdvanced() {
+    $("#advanced-buttons").toggle();
+    if($("#advanced-buttons").is(":visible")) {
+      $("#toggle-advanced").removeClass("button-off");
+      $("#toggle-advanced span").removeClass("glyphicon-triangle-bottom").addClass("glyphicon-triangle-top");
+    } else {
+      $("#toggle-advanced").addClass("button-off");
+      $("#toggle-advanced span").removeClass("glyphicon-triangle-top").addClass("glyphicon-triangle-bottom");
+    }
+  }
+  
+  // Triggers the appropriate action for each button that can be pressed
+  function processButton(button) {
+    switch($(button).attr("id")) {
+      case "delete":
+        deleteLast();
+        break;
+      case "clear":
+        if(tokenList.length === 0) {
+          calcHistory.length = 0;
+          $("#calc-history-box").html("");
+        } else {
+          tokenList.length = 0;
+          displayEquation();
+        }
+        break;
+      case "period":
+        if(isNaN(tokenList[tokenList.length - 1])) {
+          addToken("0.");
+        } else {
+          if(tokenList[tokenList.length - 1].indexOf(".") === -1) {
+            tokenList[tokenList.length - 1] += ".";
+          }
+        }
+        displayEquation();
+        break;
+      case "equals":
+        calculate();
+        break;
+      case "toggle-advanced":
+        toggleAdvanced();
+        break;
+      case "num-pi":
+        addToken("num-pi");
+        break;
+      default:
+        if($(button).hasClass("num")) {
+          addToken($(button).html());
+        } else {
+          addToken($(button).attr("id"));
+        }
+    }
+  }
+  
+  // Catches all button clicks on the page
+  $(".btn").click(function(event) {
+    $(event.target).blur();
+    processButton(event.target);
+  });
+  
+  $(document).on("click", ".calc-history-eq", function(event) {
+    var tokens = calcHistory[parseInt($(event.target).attr("id").substring(2))].tokens;
+    console.log(parseInt($(event.target).attr("id").substring(2)));
+    console.log(calcHistory);
+    console.log(tokens);
+    tokenList = tokens;
+    displayEquation();
+  });
+  
+});
+</script>

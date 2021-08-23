@@ -1,0 +1,68 @@
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>
+  <div class="header">
+    <div class="pss"><a href="calc.html">Calculator Page</a></div>
+    <div class="pss"><a href="calc.html">History Page</a></div>
+    <div class="pss"><a href="profile.html">Profile Page</a></div>
+    <div class="lot"><a href="login.html">Log Out</a></div>
+  </div>
+  <form class="form-inline foo w-50 " action="calc.html">
+    <div class="form-group">
+      <label class="sr-only" for="name">First Name:</label>
+      <input type="text" class="form-control" id="name">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="lname">Last Name:</label>
+      <input type="text" class="form-control" id="lname">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd">
+    </div>
+    <button type="submit" class="btn btn-primary">Save Change</button>
+  </form>
+</body>
+<style>
+  body{
+    background-color: rgba(0, 0, 255, 0.5);
+  }
+  .foo{
+    margin-top: 180px;
+    margin-left: 370px;
+  }
+  .header{
+  display:flex;
+  height: 60px;
+  justify-content: center;
+  background-color:#33adff71;
+}
+.pss{
+  margin-top: 18px;
+  margin-left: 50px;
+
+}
+.lot{
+  margin-left: 320px;
+
+}
+.lot:active,.pss:active{
+  background-color: #461010;
+  margin-bottom: 20px;
+  color: black;
+  height: 20px;
+
+}
+.lot,.pss{
+  background-color: #444444da;
+  height: 40px;
+  padding:5px;
+  border-radius: 5px;
+}
+a{
+  text-decoration: none;
+}
+</style>
